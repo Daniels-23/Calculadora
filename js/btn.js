@@ -31,7 +31,7 @@ class Buttons {
             case "btn-equal":
                 this.btn.addEventListener("click", () => {
                     try {
-                        console.log(typeof input.value);
+                        console.log(input.value);
                         calc = Number(input.value);
                     }
                     catch (error) {

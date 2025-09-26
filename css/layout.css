@@ -1,0 +1,71 @@
+/* Configuraciones generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url(/fonts/leaguespartan-variablefont_wght.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Colores personalizados en variables */
+:root{
+    --main-bg-color: #3a4764;
+    --toggle-bg-color: #232c43;
+    --screen-bg-color: #182034;
+    --keypad-bg-color: #242d44;
+    --key-bg-color: #eae3dc;
+    --key-shadow-color: #b4a597;
+    --key-bg-color-toggle: #637097;
+    --key-shadow-color-toggle: #404e72;
+    --key-bg-color-equal: #d03f2f;
+    --key-shadow-color-equal: #93261a;
+    --text-color: #444b5a;
+    --text-color-toggle: white;
+    --font-normal: "Spartan", sans-serif;
+}
+
+/* Cuerpo de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    padding: 12px;
+    font-family: --font-normal;
+
+    background-color: var(--main-bg-color);
+}
+
+@media (min-width: 768px) {
+   .container {
+        display: grid;
+        grid: repeat(5, 100px) / auto-flow 80px;
+        width: auto;
+        height: auto;
+        position: relative;
+
+        background-color: var(--keypad-bg-color);
+        border-radius: 1rem;
+        box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.4),
+                    10px 0px 25px rgba(0, 0, 0, 0.4);
+        outline: solid 15px #111;
+
+        padding: 26px;
+        margin: auto;
+        gap: 12px;
+    }
+
+    .container > #input {
+        grid-column: span 4; 
+        text-align: end;
+        letter-spacing: -4px;
+        font-size: 1.7rem;
+    }
+}
